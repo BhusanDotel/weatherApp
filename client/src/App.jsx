@@ -56,7 +56,7 @@ function App() {
     }
     async function getWeatherData() {
       await axios
-        .post("http://localhost:3000/api/weatherdata", { city })
+        .post("https://bhusanweatherbe.onrender.com/api/weatherdata", { city })
         .then((res) => {
           if (res.data) {
             if (res.data === "no city found") {
