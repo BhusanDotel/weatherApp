@@ -3,7 +3,7 @@
   border-radius: 20px;
   width: 400px;
   background-color: rgb(42, 91, 197);
-  background-image: url("./images/background.jpg");
+  background-image: url("/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 35%;
