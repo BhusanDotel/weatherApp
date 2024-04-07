@@ -35,10 +35,8 @@ app.get("/test-webhook", (req, res) => {
 });
 
 app.post("/test-webhook", (req, res) => {
-  if (req.body) {
-    console.log("Responses", req.body);
-    res.json({ message: "Webhook received" }).status(200);
-  }
+  console.log("Data Items", req);
+  res.json({ message: "Webhook received" }).status(200);
 });
 
 app.listen(PORT, () => {
