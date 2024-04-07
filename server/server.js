@@ -15,7 +15,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api", weatherDataroute);
 
 app.post("/test-webhook", (req, res) => {
-  console.log("Responses", req.body);
+  if (req.body) {
+    console.log("Responses", req.body);
+    res.json({ message: "Webhook received" }).status(200);
+  }
 });
 
 app.listen(PORT, () => {
