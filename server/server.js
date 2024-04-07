@@ -14,6 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/api", weatherDataroute);
 
+app.post("/test-webhook", (req, res) => {
+  console.log("Responses", req.body);
+});
+
 app.listen(PORT, () => {
   console.log("App listening on port 3000!");
 });
